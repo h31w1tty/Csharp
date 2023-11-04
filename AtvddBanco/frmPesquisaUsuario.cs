@@ -36,22 +36,22 @@ namespace AtvddBanco
             Close();
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
+        private void tb_usuarioDataGridView_DoubleClick(object sender, EventArgs e)
         {
-            if(txtNome.Text == "")
+            codigo = Convert.ToInt32(tb_usuarioDataGridView.CurrentRow.Cells[0].Value);
+            Close();
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNome.Text == "")
             {
                 this.tb_usuarioTableAdapter.Fill(this.banquihoDataSet.tb_usuario);
             }
             else
             {
-                this.tb_usuarioTableAdapter.FillByNome(this.banquihoDataSet.tb_usuario, "%"+txtNome.Text+"%");
+                this.tb_usuarioTableAdapter.FillByNome(this.banquihoDataSet.tb_usuario, "%" + txtNome.Text + "%");
             }
-        }
-
-        private void tb_usuarioDataGridView_DoubleClick(object sender, EventArgs e)
-        {
-            codigo = Convert.ToInt32(tb_usuarioDataGridView.CurrentRow.Cells[0].Value);
-            Close();
         }
     }
 }
