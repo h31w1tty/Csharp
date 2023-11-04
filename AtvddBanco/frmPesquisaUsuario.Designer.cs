@@ -76,7 +76,7 @@
             this.tb_usuarioDataGridView.Location = new System.Drawing.Point(133, 102);
             this.tb_usuarioDataGridView.Name = "tb_usuarioDataGridView";
             this.tb_usuarioDataGridView.ReadOnly = true;
-            this.tb_usuarioDataGridView.Size = new System.Drawing.Size(514, 231);
+            this.tb_usuarioDataGridView.Size = new System.Drawing.Size(510, 230);
             this.tb_usuarioDataGridView.TabIndex = 4;
             this.tb_usuarioDataGridView.DoubleClick += new System.EventHandler(this.tb_usuarioDataGridView_DoubleClick);
             // 

@@ -51,3 +51,4 @@ C:\Users\rick\Desktop\Csharp\AtvddBanco\obj\Debug\AtvddBanco.csproj.GenerateReso
 C:\Users\rick\Desktop\Csharp\AtvddBanco\obj\Debug\AtvddBanco.csproj.CoreCompileInputs.cache
 C:\Users\rick\Desktop\Csharp\AtvddBanco\obj\Debug\AtvddBanco.exe
 C:\Users\rick\Desktop\Csharp\AtvddBanco\obj\Debug\AtvddBanco.pdb
+C:\Users\rick\Desktop\Csharp\AtvddBanco\obj\Debug\AtvddBanco.frmPesquisaCliente.resources

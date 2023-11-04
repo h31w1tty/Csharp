@@ -274,5 +274,18 @@ namespace AtvddBanco
         {
 
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            int cod, reg;
+            frmPesquisaCliente fpc = new frmPesquisaCliente();
+            fpc.ShowDialog();
+            cod = fpc.getCodigo();
+            if (cod > 0)
+            {
+                reg = tb_clienteBindingSource.Find("cd_usuario", cod);
+                tb_clienteBindingSource.Position = reg;
+            }
+        }
     }
 }

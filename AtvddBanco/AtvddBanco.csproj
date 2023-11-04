@@ -108,6 +108,12 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPesquisaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPesquisaCliente.Designer.cs">
+      <DependentUpon>frmPesquisaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCliente.resx">
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmFornecedor.resx">
       <DependentUpon>frmFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPesquisaCliente.resx">
+      <DependentUpon>frmPesquisaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPesquisaUsuario.resx">
       <DependentUpon>frmPesquisaUsuario.cs</DependentUpon>
