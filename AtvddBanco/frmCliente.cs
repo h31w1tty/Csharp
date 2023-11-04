@@ -283,7 +283,7 @@ namespace AtvddBanco
             cod = fpc.getCodigo();
             if (cod > 0)
             {
-                reg = tb_clienteBindingSource.Find("cd_usuario", cod);
+                reg = tb_clienteBindingSource.Find("cd_cliente", cod);
                 tb_clienteBindingSource.Position = reg;
             }
         }

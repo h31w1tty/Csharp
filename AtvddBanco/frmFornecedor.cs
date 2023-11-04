@@ -197,5 +197,18 @@ namespace AtvddBanco
         {
             CnpjBranco();
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            int cod, reg;
+            frmPesquisaFornecedor fpf = new frmPesquisaFornecedor();
+            fpf.ShowDialog();
+            cod = fpf.getCodigo();
+            if (cod > 0)
+            {
+                reg = tb_fornecedorBindingSource.Find("cd_fornecedor", cod);
+                tb_fornecedorBindingSource.Position = reg;
+            }
+        }
     }
 }

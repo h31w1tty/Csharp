@@ -52,3 +52,4 @@ C:\Users\rick\Desktop\Csharp\AtvddBanco\obj\Debug\AtvddBanco.csproj.CoreCompileI
 C:\Users\rick\Desktop\Csharp\AtvddBanco\obj\Debug\AtvddBanco.exe
 C:\Users\rick\Desktop\Csharp\AtvddBanco\obj\Debug\AtvddBanco.pdb
 C:\Users\rick\Desktop\Csharp\AtvddBanco\obj\Debug\AtvddBanco.frmPesquisaCliente.resources
+C:\Users\rick\Desktop\Csharp\AtvddBanco\obj\Debug\AtvddBanco.frmPesquisaFornecedor.resources

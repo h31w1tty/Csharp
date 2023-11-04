@@ -51,6 +51,7 @@ namespace AtvddBanco
 
         private void btnSair_Click(object sender, EventArgs e)
         {
+            codigo = 0;
             Close();
         }
 
@@ -58,6 +59,16 @@ namespace AtvddBanco
         {
             codigo = Convert.ToInt32(tb_clienteDataGridView.CurrentRow.Cells[0].Value);
             Close();
+        }
+
+        private void tb_clienteDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
