@@ -74,6 +74,96 @@
             ((System.ComponentModel.ISupportInitialize)(this.tb_contasPagarBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // cd_contaLabel
+            // 
+            cd_contaLabel.AutoSize = true;
+            cd_contaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            cd_contaLabel.Location = new System.Drawing.Point(134, 22);
+            cd_contaLabel.Name = "cd_contaLabel";
+            cd_contaLabel.Size = new System.Drawing.Size(130, 24);
+            cd_contaLabel.TabIndex = 55;
+            cd_contaLabel.Text = "Código/Conta:";
+            // 
+            // cd_documentoLabel
+            // 
+            cd_documentoLabel.AutoSize = true;
+            cd_documentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            cd_documentoLabel.Location = new System.Drawing.Point(356, 93);
+            cd_documentoLabel.Name = "cd_documentoLabel";
+            cd_documentoLabel.Size = new System.Drawing.Size(191, 24);
+            cd_documentoLabel.TabIndex = 57;
+            cd_documentoLabel.Text = "Núm. do Documento:";
+            // 
+            // ds_documentoLabel
+            // 
+            ds_documentoLabel.AutoSize = true;
+            ds_documentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            ds_documentoLabel.Location = new System.Drawing.Point(12, 93);
+            ds_documentoLabel.Name = "ds_documentoLabel";
+            ds_documentoLabel.Size = new System.Drawing.Size(183, 24);
+            ds_documentoLabel.TabIndex = 59;
+            ds_documentoLabel.Text = "Tipo de Documento:";
+            // 
+            // dt_emissaoLabel
+            // 
+            dt_emissaoLabel.AutoSize = true;
+            dt_emissaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            dt_emissaoLabel.Location = new System.Drawing.Point(33, 131);
+            dt_emissaoLabel.Name = "dt_emissaoLabel";
+            dt_emissaoLabel.Size = new System.Drawing.Size(156, 24);
+            dt_emissaoLabel.TabIndex = 61;
+            dt_emissaoLabel.Text = "Data de Emissão:";
+            // 
+            // dt_vencimentoLabel
+            // 
+            dt_vencimentoLabel.AutoSize = true;
+            dt_vencimentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            dt_vencimentoLabel.Location = new System.Drawing.Point(501, 243);
+            dt_vencimentoLabel.Name = "dt_vencimentoLabel";
+            dt_vencimentoLabel.Size = new System.Drawing.Size(117, 24);
+            dt_vencimentoLabel.TabIndex = 63;
+            dt_vencimentoLabel.Text = "Vencimento:";
+            // 
+            // vl_documentoLabel
+            // 
+            vl_documentoLabel.AutoSize = true;
+            vl_documentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            vl_documentoLabel.Location = new System.Drawing.Point(364, 129);
+            vl_documentoLabel.Name = "vl_documentoLabel";
+            vl_documentoLabel.Size = new System.Drawing.Size(189, 24);
+            vl_documentoLabel.TabIndex = 65;
+            vl_documentoLabel.Text = "Valor do Documento:";
+            // 
+            // dt_pagamentoLabel
+            // 
+            dt_pagamentoLabel.AutoSize = true;
+            dt_pagamentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            dt_pagamentoLabel.Location = new System.Drawing.Point(78, 166);
+            dt_pagamentoLabel.Name = "dt_pagamentoLabel";
+            dt_pagamentoLabel.Size = new System.Drawing.Size(111, 24);
+            dt_pagamentoLabel.TabIndex = 67;
+            dt_pagamentoLabel.Text = "Pagamento:";
+            // 
+            // vl_pagoLabel
+            // 
+            vl_pagoLabel.AutoSize = true;
+            vl_pagoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            vl_pagoLabel.Location = new System.Drawing.Point(445, 204);
+            vl_pagoLabel.Name = "vl_pagoLabel";
+            vl_pagoLabel.Size = new System.Drawing.Size(108, 24);
+            vl_pagoLabel.TabIndex = 69;
+            vl_pagoLabel.Text = "Valor Pago:";
+            // 
+            // cd_fornecedorLabel
+            // 
+            cd_fornecedorLabel.AutoSize = true;
+            cd_fornecedorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            cd_fornecedorLabel.Location = new System.Drawing.Point(384, 22);
+            cd_fornecedorLabel.Name = "cd_fornecedorLabel";
+            cd_fornecedorLabel.Size = new System.Drawing.Size(181, 24);
+            cd_fornecedorLabel.TabIndex = 71;
+            cd_fornecedorLabel.Text = "Código/Fornecedor:";
+            // 
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -104,6 +194,7 @@
             this.btnPesquisar.TabIndex = 52;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnCancelar
             // 
@@ -206,175 +297,88 @@
             this.tableAdapterManager.tb_usuarioTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = AtvddBanco.BanquihoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // cd_contaLabel
-            // 
-            cd_contaLabel.AutoSize = true;
-            cd_contaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            cd_contaLabel.Location = new System.Drawing.Point(134, 17);
-            cd_contaLabel.Name = "cd_contaLabel";
-            cd_contaLabel.Size = new System.Drawing.Size(130, 24);
-            cd_contaLabel.TabIndex = 55;
-            cd_contaLabel.Text = "Código/Conta:";
-            // 
             // cd_contaTextBox
             // 
             this.cd_contaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_contasPagarBindingSource, "cd_conta", true));
             this.cd_contaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.cd_contaTextBox.Location = new System.Drawing.Point(264, 17);
+            this.cd_contaTextBox.Location = new System.Drawing.Point(264, 22);
             this.cd_contaTextBox.Name = "cd_contaTextBox";
             this.cd_contaTextBox.Size = new System.Drawing.Size(80, 29);
             this.cd_contaTextBox.TabIndex = 56;
-            // 
-            // cd_documentoLabel
-            // 
-            cd_documentoLabel.AutoSize = true;
-            cd_documentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            cd_documentoLabel.Location = new System.Drawing.Point(342, 90);
-            cd_documentoLabel.Name = "cd_documentoLabel";
-            cd_documentoLabel.Size = new System.Drawing.Size(209, 24);
-            cd_documentoLabel.TabIndex = 57;
-            cd_documentoLabel.Text = "Número do Documento";
             // 
             // cd_documentoTextBox
             // 
             this.cd_documentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_contasPagarBindingSource, "cd_documento", true));
             this.cd_documentoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.cd_documentoTextBox.Location = new System.Drawing.Point(551, 90);
+            this.cd_documentoTextBox.Location = new System.Drawing.Point(553, 92);
             this.cd_documentoTextBox.MaxLength = 15;
             this.cd_documentoTextBox.Name = "cd_documentoTextBox";
             this.cd_documentoTextBox.Size = new System.Drawing.Size(200, 29);
             this.cd_documentoTextBox.TabIndex = 58;
             // 
-            // ds_documentoLabel
-            // 
-            ds_documentoLabel.AutoSize = true;
-            ds_documentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            ds_documentoLabel.Location = new System.Drawing.Point(15, 90);
-            ds_documentoLabel.Name = "ds_documentoLabel";
-            ds_documentoLabel.Size = new System.Drawing.Size(183, 24);
-            ds_documentoLabel.TabIndex = 59;
-            ds_documentoLabel.Text = "Tipo de Documento:";
-            // 
             // ds_documentoTextBox
             // 
             this.ds_documentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_contasPagarBindingSource, "ds_documento", true));
             this.ds_documentoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.ds_documentoTextBox.Location = new System.Drawing.Point(198, 90);
+            this.ds_documentoTextBox.Location = new System.Drawing.Point(195, 92);
             this.ds_documentoTextBox.MaxLength = 40;
             this.ds_documentoTextBox.Name = "ds_documentoTextBox";
             this.ds_documentoTextBox.Size = new System.Drawing.Size(139, 29);
             this.ds_documentoTextBox.TabIndex = 60;
             // 
-            // dt_emissaoLabel
-            // 
-            dt_emissaoLabel.AutoSize = true;
-            dt_emissaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            dt_emissaoLabel.Location = new System.Drawing.Point(16, 133);
-            dt_emissaoLabel.Name = "dt_emissaoLabel";
-            dt_emissaoLabel.Size = new System.Drawing.Size(156, 24);
-            dt_emissaoLabel.TabIndex = 61;
-            dt_emissaoLabel.Text = "Data de Emissão:";
-            // 
             // dt_emissaoDateTimePicker
             // 
             this.dt_emissaoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tb_contasPagarBindingSource, "dt_emissao", true));
             this.dt_emissaoDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.dt_emissaoDateTimePicker.Location = new System.Drawing.Point(172, 133);
+            this.dt_emissaoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt_emissaoDateTimePicker.Location = new System.Drawing.Point(195, 127);
             this.dt_emissaoDateTimePicker.Name = "dt_emissaoDateTimePicker";
-            this.dt_emissaoDateTimePicker.Size = new System.Drawing.Size(200, 29);
+            this.dt_emissaoDateTimePicker.Size = new System.Drawing.Size(129, 29);
             this.dt_emissaoDateTimePicker.TabIndex = 62;
-            // 
-            // dt_vencimentoLabel
-            // 
-            dt_vencimentoLabel.AutoSize = true;
-            dt_vencimentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            dt_vencimentoLabel.Location = new System.Drawing.Point(34, 203);
-            dt_vencimentoLabel.Name = "dt_vencimentoLabel";
-            dt_vencimentoLabel.Size = new System.Drawing.Size(117, 24);
-            dt_vencimentoLabel.TabIndex = 63;
-            dt_vencimentoLabel.Text = "Vencimento:";
             // 
             // dt_vencimentoDateTimePicker
             // 
             this.dt_vencimentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tb_contasPagarBindingSource, "dt_vencimento", true));
             this.dt_vencimentoDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.dt_vencimentoDateTimePicker.Location = new System.Drawing.Point(151, 203);
+            this.dt_vencimentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt_vencimentoDateTimePicker.Location = new System.Drawing.Point(624, 238);
             this.dt_vencimentoDateTimePicker.Name = "dt_vencimentoDateTimePicker";
-            this.dt_vencimentoDateTimePicker.Size = new System.Drawing.Size(200, 29);
+            this.dt_vencimentoDateTimePicker.Size = new System.Drawing.Size(129, 29);
             this.dt_vencimentoDateTimePicker.TabIndex = 64;
-            // 
-            // vl_documentoLabel
-            // 
-            vl_documentoLabel.AutoSize = true;
-            vl_documentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            vl_documentoLabel.Location = new System.Drawing.Point(356, 203);
-            vl_documentoLabel.Name = "vl_documentoLabel";
-            vl_documentoLabel.Size = new System.Drawing.Size(189, 24);
-            vl_documentoLabel.TabIndex = 65;
-            vl_documentoLabel.Text = "Valor do Documento:";
             // 
             // vl_documentoTextBox
             // 
             this.vl_documentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_contasPagarBindingSource, "vl_documento", true));
             this.vl_documentoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.vl_documentoTextBox.Location = new System.Drawing.Point(545, 203);
+            this.vl_documentoTextBox.Location = new System.Drawing.Point(553, 127);
             this.vl_documentoTextBox.Name = "vl_documentoTextBox";
             this.vl_documentoTextBox.Size = new System.Drawing.Size(200, 29);
             this.vl_documentoTextBox.TabIndex = 66;
-            // 
-            // dt_pagamentoLabel
-            // 
-            dt_pagamentoLabel.AutoSize = true;
-            dt_pagamentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            dt_pagamentoLabel.Location = new System.Drawing.Point(384, 133);
-            dt_pagamentoLabel.Name = "dt_pagamentoLabel";
-            dt_pagamentoLabel.Size = new System.Drawing.Size(111, 24);
-            dt_pagamentoLabel.TabIndex = 67;
-            dt_pagamentoLabel.Text = "Pagamento:";
             // 
             // dt_pagamentoDateTimePicker
             // 
             this.dt_pagamentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tb_contasPagarBindingSource, "dt_pagamento", true));
             this.dt_pagamentoDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.dt_pagamentoDateTimePicker.Location = new System.Drawing.Point(495, 133);
+            this.dt_pagamentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt_pagamentoDateTimePicker.Location = new System.Drawing.Point(195, 162);
             this.dt_pagamentoDateTimePicker.Name = "dt_pagamentoDateTimePicker";
-            this.dt_pagamentoDateTimePicker.Size = new System.Drawing.Size(200, 29);
+            this.dt_pagamentoDateTimePicker.Size = new System.Drawing.Size(129, 29);
             this.dt_pagamentoDateTimePicker.TabIndex = 68;
-            // 
-            // vl_pagoLabel
-            // 
-            vl_pagoLabel.AutoSize = true;
-            vl_pagoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            vl_pagoLabel.Location = new System.Drawing.Point(425, 244);
-            vl_pagoLabel.Name = "vl_pagoLabel";
-            vl_pagoLabel.Size = new System.Drawing.Size(108, 24);
-            vl_pagoLabel.TabIndex = 69;
-            vl_pagoLabel.Text = "Valor Pago:";
             // 
             // vl_pagoTextBox
             // 
             this.vl_pagoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_contasPagarBindingSource, "vl_pago", true));
             this.vl_pagoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.vl_pagoTextBox.Location = new System.Drawing.Point(533, 243);
+            this.vl_pagoTextBox.Location = new System.Drawing.Point(553, 203);
             this.vl_pagoTextBox.Name = "vl_pagoTextBox";
             this.vl_pagoTextBox.Size = new System.Drawing.Size(200, 29);
             this.vl_pagoTextBox.TabIndex = 70;
-            // 
-            // cd_fornecedorLabel
-            // 
-            cd_fornecedorLabel.AutoSize = true;
-            cd_fornecedorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            cd_fornecedorLabel.Location = new System.Drawing.Point(384, 17);
-            cd_fornecedorLabel.Name = "cd_fornecedorLabel";
-            cd_fornecedorLabel.Size = new System.Drawing.Size(181, 24);
-            cd_fornecedorLabel.TabIndex = 71;
-            cd_fornecedorLabel.Text = "Código/Fornecedor:";
             // 
             // cd_fornecedorTextBox
             // 
             this.cd_fornecedorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_contasPagarBindingSource, "cd_fornecedor", true));
             this.cd_fornecedorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.cd_fornecedorTextBox.Location = new System.Drawing.Point(565, 17);
+            this.cd_fornecedorTextBox.Location = new System.Drawing.Point(565, 22);
             this.cd_fornecedorTextBox.MaxLength = 9;
             this.cd_fornecedorTextBox.Name = "cd_fornecedorTextBox";
             this.cd_fornecedorTextBox.Size = new System.Drawing.Size(85, 29);

@@ -88,7 +88,7 @@
             // 
             cd_documentoLabel.AutoSize = true;
             cd_documentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            cd_documentoLabel.Location = new System.Drawing.Point(24, 146);
+            cd_documentoLabel.Location = new System.Drawing.Point(405, 89);
             cd_documentoLabel.Name = "cd_documentoLabel";
             cd_documentoLabel.Size = new System.Drawing.Size(164, 24);
             cd_documentoLabel.TabIndex = 47;
@@ -98,7 +98,7 @@
             // 
             ds_documentLabel.AutoSize = true;
             ds_documentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            ds_documentLabel.Location = new System.Drawing.Point(5, 110);
+            ds_documentLabel.Location = new System.Drawing.Point(4, 89);
             ds_documentLabel.Name = "ds_documentLabel";
             ds_documentLabel.Size = new System.Drawing.Size(183, 24);
             ds_documentLabel.TabIndex = 49;
@@ -108,7 +108,7 @@
             // 
             dt_emissaoLabel.AutoSize = true;
             dt_emissaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            dt_emissaoLabel.Location = new System.Drawing.Point(404, 110);
+            dt_emissaoLabel.Location = new System.Drawing.Point(4, 125);
             dt_emissaoLabel.Name = "dt_emissaoLabel";
             dt_emissaoLabel.Size = new System.Drawing.Size(87, 24);
             dt_emissaoLabel.TabIndex = 51;
@@ -118,7 +118,7 @@
             // 
             dt_vencimentoLabel.AutoSize = true;
             dt_vencimentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            dt_vencimentoLabel.Location = new System.Drawing.Point(404, 146);
+            dt_vencimentoLabel.Location = new System.Drawing.Point(524, 237);
             dt_vencimentoLabel.Name = "dt_vencimentoLabel";
             dt_vencimentoLabel.Size = new System.Drawing.Size(117, 24);
             dt_vencimentoLabel.TabIndex = 53;
@@ -128,7 +128,7 @@
             // 
             vl_documentoLabel.AutoSize = true;
             vl_documentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            vl_documentoLabel.Location = new System.Drawing.Point(5, 216);
+            vl_documentoLabel.Location = new System.Drawing.Point(380, 126);
             vl_documentoLabel.Name = "vl_documentoLabel";
             vl_documentoLabel.Size = new System.Drawing.Size(189, 24);
             vl_documentoLabel.TabIndex = 55;
@@ -138,7 +138,7 @@
             // 
             dt_pagamentoLabel.AutoSize = true;
             dt_pagamentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            dt_pagamentoLabel.Location = new System.Drawing.Point(402, 218);
+            dt_pagamentoLabel.Location = new System.Drawing.Point(4, 161);
             dt_pagamentoLabel.Name = "dt_pagamentoLabel";
             dt_pagamentoLabel.Size = new System.Drawing.Size(180, 24);
             dt_pagamentoLabel.TabIndex = 57;
@@ -148,7 +148,7 @@
             // 
             vl_pagoLabel.AutoSize = true;
             vl_pagoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            vl_pagoLabel.Location = new System.Drawing.Point(457, 261);
+            vl_pagoLabel.Location = new System.Drawing.Point(461, 201);
             vl_pagoLabel.Name = "vl_pagoLabel";
             vl_pagoLabel.Size = new System.Drawing.Size(108, 24);
             vl_pagoLabel.TabIndex = 59;
@@ -309,7 +309,7 @@
             // 
             this.cd_documentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_contasReceberBindingSource, "cd_documento", true));
             this.cd_documentoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.cd_documentoTextBox.Location = new System.Drawing.Point(188, 145);
+            this.cd_documentoTextBox.Location = new System.Drawing.Point(569, 88);
             this.cd_documentoTextBox.MaxLength = 15;
             this.cd_documentoTextBox.Name = "cd_documentoTextBox";
             this.cd_documentoTextBox.Size = new System.Drawing.Size(200, 29);
@@ -319,7 +319,7 @@
             // 
             this.ds_documentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_contasReceberBindingSource, "ds_document", true));
             this.ds_documentTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.ds_documentTextBox.Location = new System.Drawing.Point(188, 110);
+            this.ds_documentTextBox.Location = new System.Drawing.Point(193, 88);
             this.ds_documentTextBox.MaxLength = 40;
             this.ds_documentTextBox.Name = "ds_documentTextBox";
             this.ds_documentTextBox.Size = new System.Drawing.Size(200, 29);
@@ -329,25 +329,27 @@
             // 
             this.dt_emissaoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tb_contasReceberBindingSource, "dt_emissao", true));
             this.dt_emissaoDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.dt_emissaoDateTimePicker.Location = new System.Drawing.Point(491, 110);
+            this.dt_emissaoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt_emissaoDateTimePicker.Location = new System.Drawing.Point(193, 125);
             this.dt_emissaoDateTimePicker.Name = "dt_emissaoDateTimePicker";
-            this.dt_emissaoDateTimePicker.Size = new System.Drawing.Size(200, 29);
+            this.dt_emissaoDateTimePicker.Size = new System.Drawing.Size(128, 29);
             this.dt_emissaoDateTimePicker.TabIndex = 52;
             // 
             // dt_vencimentoDateTimePicker
             // 
             this.dt_vencimentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tb_contasReceberBindingSource, "dt_vencimento", true));
             this.dt_vencimentoDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.dt_vencimentoDateTimePicker.Location = new System.Drawing.Point(521, 144);
+            this.dt_vencimentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt_vencimentoDateTimePicker.Location = new System.Drawing.Point(641, 235);
             this.dt_vencimentoDateTimePicker.Name = "dt_vencimentoDateTimePicker";
-            this.dt_vencimentoDateTimePicker.Size = new System.Drawing.Size(200, 29);
+            this.dt_vencimentoDateTimePicker.Size = new System.Drawing.Size(128, 29);
             this.dt_vencimentoDateTimePicker.TabIndex = 54;
             // 
             // vl_documentoTextBox
             // 
             this.vl_documentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_contasReceberBindingSource, "vl_documento", true));
             this.vl_documentoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.vl_documentoTextBox.Location = new System.Drawing.Point(194, 215);
+            this.vl_documentoTextBox.Location = new System.Drawing.Point(569, 125);
             this.vl_documentoTextBox.Name = "vl_documentoTextBox";
             this.vl_documentoTextBox.Size = new System.Drawing.Size(200, 29);
             this.vl_documentoTextBox.TabIndex = 56;
@@ -356,16 +358,17 @@
             // 
             this.dt_pagamentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tb_contasReceberBindingSource, "dt_pagamento", true));
             this.dt_pagamentoDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.dt_pagamentoDateTimePicker.Location = new System.Drawing.Point(582, 217);
+            this.dt_pagamentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt_pagamentoDateTimePicker.Location = new System.Drawing.Point(193, 161);
             this.dt_pagamentoDateTimePicker.Name = "dt_pagamentoDateTimePicker";
-            this.dt_pagamentoDateTimePicker.Size = new System.Drawing.Size(200, 29);
+            this.dt_pagamentoDateTimePicker.Size = new System.Drawing.Size(128, 29);
             this.dt_pagamentoDateTimePicker.TabIndex = 58;
             // 
             // vl_pagoTextBox
             // 
             this.vl_pagoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_contasReceberBindingSource, "vl_pago", true));
             this.vl_pagoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.vl_pagoTextBox.Location = new System.Drawing.Point(565, 260);
+            this.vl_pagoTextBox.Location = new System.Drawing.Point(569, 200);
             this.vl_pagoTextBox.Name = "vl_pagoTextBox";
             this.vl_pagoTextBox.Size = new System.Drawing.Size(200, 29);
             this.vl_pagoTextBox.TabIndex = 60;

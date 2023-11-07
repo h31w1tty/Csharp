@@ -121,7 +121,7 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "cd_cliente";
-            this.dataGridViewTextBoxColumn1.HeaderText = "cd_cliente";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Código";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Width = 80;
@@ -129,7 +129,7 @@
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "nm_cliente";
-            this.dataGridViewTextBoxColumn2.HeaderText = "nm_cliente";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nome";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Width = 400;

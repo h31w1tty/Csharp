@@ -127,5 +127,11 @@ namespace AtvddBanco
         {
             Close();
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            frmPesquisaContasPagar fpcp = new frmPesquisaContasPagar();
+            fpcp.ShowDialog();
+        }
     }
 }
