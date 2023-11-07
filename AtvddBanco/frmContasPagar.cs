@@ -130,8 +130,15 @@ namespace AtvddBanco
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
+            int cod, reg;
             frmPesquisaContasPagar fpcp = new frmPesquisaContasPagar();
             fpcp.ShowDialog();
+            cod = fpcp.getCodigo();
+            if (cod > 0)
+            {
+                reg = tb_contasPagarBindingSource.Find("cd_conta", cod);
+                tb_contasPagarBindingSource.Position = reg;
+            }
         }
     }
 }

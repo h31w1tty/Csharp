@@ -34,19 +34,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSair = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.banquihoDataSet = new AtvddBanco.BanquihoDataSet();
-            this.tb_contasPagarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tb_contasPagarTableAdapter = new AtvddBanco.BanquihoDataSetTableAdapters.tb_contasPagarTableAdapter();
-            this.tableAdapterManager = new AtvddBanco.BanquihoDataSetTableAdapters.TableAdapterManager();
             this.tb_contasPagarDataGridView = new System.Windows.Forms.DataGridView();
+            this.cd_data = new System.Windows.Forms.DateTimePicker();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dt_pagamentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.banquihoDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tb_contasPagarBindingSource)).BeginInit();
+            this.tb_contasPagarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.banquihoDataSet = new AtvddBanco.BanquihoDataSet();
+            this.tb_contasPagarTableAdapter = new AtvddBanco.BanquihoDataSetTableAdapters.tb_contasPagarTableAdapter();
+            this.tableAdapterManager = new AtvddBanco.BanquihoDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.tb_contasPagarDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_contasPagarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.banquihoDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSair
@@ -59,6 +59,7 @@
             this.btnSair.TabIndex = 13;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // label1
             // 
@@ -69,30 +70,6 @@
             this.label1.Size = new System.Drawing.Size(117, 24);
             this.label1.TabIndex = 11;
             this.label1.Text = "Vencimento:";
-            // 
-            // banquihoDataSet
-            // 
-            this.banquihoDataSet.DataSetName = "BanquihoDataSet";
-            this.banquihoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tb_contasPagarBindingSource
-            // 
-            this.tb_contasPagarBindingSource.DataMember = "tb_contasPagar";
-            this.tb_contasPagarBindingSource.DataSource = this.banquihoDataSet;
-            // 
-            // tb_contasPagarTableAdapter
-            // 
-            this.tb_contasPagarTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.tb_clienteTableAdapter = null;
-            this.tableAdapterManager.tb_contasPagarTableAdapter = this.tb_contasPagarTableAdapter;
-            this.tableAdapterManager.tb_contasReceberTableAdapter = null;
-            this.tableAdapterManager.tb_fornecedorTableAdapter = null;
-            this.tableAdapterManager.tb_usuarioTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = AtvddBanco.BanquihoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // tb_contasPagarDataGridView
             // 
@@ -133,8 +110,19 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.tb_contasPagarDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.tb_contasPagarDataGridView.Size = new System.Drawing.Size(583, 276);
+            this.tb_contasPagarDataGridView.Size = new System.Drawing.Size(590, 276);
             this.tb_contasPagarDataGridView.TabIndex = 14;
+            this.tb_contasPagarDataGridView.DoubleClick += new System.EventHandler(this.tb_contasPagarDataGridView_DoubleClick);
+            // 
+            // cd_data
+            // 
+            this.cd_data.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.cd_data.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.cd_data.Location = new System.Drawing.Point(227, 47);
+            this.cd_data.Name = "cd_data";
+            this.cd_data.Size = new System.Drawing.Size(128, 29);
+            this.cd_data.TabIndex = 59;
+            this.cd_data.ValueChanged += new System.EventHandler(this.dt_pagamentoDateTimePicker_ValueChanged);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -168,14 +156,29 @@
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Width = 140;
             // 
-            // dt_pagamentoDateTimePicker
+            // tb_contasPagarBindingSource
             // 
-            this.dt_pagamentoDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.dt_pagamentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt_pagamentoDateTimePicker.Location = new System.Drawing.Point(227, 47);
-            this.dt_pagamentoDateTimePicker.Name = "dt_pagamentoDateTimePicker";
-            this.dt_pagamentoDateTimePicker.Size = new System.Drawing.Size(128, 29);
-            this.dt_pagamentoDateTimePicker.TabIndex = 59;
+            this.tb_contasPagarBindingSource.DataMember = "tb_contasPagar";
+            this.tb_contasPagarBindingSource.DataSource = this.banquihoDataSet;
+            // 
+            // banquihoDataSet
+            // 
+            this.banquihoDataSet.DataSetName = "BanquihoDataSet";
+            this.banquihoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tb_contasPagarTableAdapter
+            // 
+            this.tb_contasPagarTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.tb_clienteTableAdapter = null;
+            this.tableAdapterManager.tb_contasPagarTableAdapter = this.tb_contasPagarTableAdapter;
+            this.tableAdapterManager.tb_contasReceberTableAdapter = null;
+            this.tableAdapterManager.tb_fornecedorTableAdapter = null;
+            this.tableAdapterManager.tb_usuarioTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = AtvddBanco.BanquihoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // frmPesquisaContasPagar
             // 
@@ -183,7 +186,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
-            this.Controls.Add(this.dt_pagamentoDateTimePicker);
+            this.Controls.Add(this.cd_data);
             this.Controls.Add(this.tb_contasPagarDataGridView);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.label1);
@@ -191,9 +194,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPesquisaContasPagar";
             this.Load += new System.EventHandler(this.frmPesquisaContasPagar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.banquihoDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tb_contasPagarBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_contasPagarDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_contasPagarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.banquihoDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,6 +215,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DateTimePicker dt_pagamentoDateTimePicker;
+        private System.Windows.Forms.DateTimePicker cd_data;
     }
 }

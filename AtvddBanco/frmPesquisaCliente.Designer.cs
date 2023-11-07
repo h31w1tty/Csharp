@@ -75,7 +75,6 @@
             this.label1.Size = new System.Drawing.Size(62, 24);
             this.label1.TabIndex = 6;
             this.label1.Text = "Nome";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // banquihoDataSet
             // 
@@ -124,7 +123,6 @@
             this.tb_clienteDataGridView.ReadOnly = true;
             this.tb_clienteDataGridView.Size = new System.Drawing.Size(542, 228);
             this.tb_clienteDataGridView.TabIndex = 10;
-            this.tb_clienteDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tb_clienteDataGridView_CellContentClick);
             this.tb_clienteDataGridView.DoubleClick += new System.EventHandler(this.tb_clienteDataGridView_DoubleClick);
             // 
             // dataGridViewTextBoxColumn1
