@@ -74,3 +74,5 @@ C:\Users\aluno1\Desktop\Csharp\AtvddBanco\obj\Debug\AtvddBanco.csproj.GenerateRe
 C:\Users\aluno1\Desktop\Csharp\AtvddBanco\obj\Debug\AtvddBanco.csproj.CoreCompileInputs.cache
 C:\Users\aluno1\Desktop\Csharp\AtvddBanco\obj\Debug\AtvddBanco.exe
 C:\Users\aluno1\Desktop\Csharp\AtvddBanco\obj\Debug\AtvddBanco.pdb
+C:\Users\rick\Desktop\Csharp\AtvddBanco\obj\Debug\AtvddBanco.frmPesquisaContasPagar.resources
+C:\Users\rick\Desktop\Csharp\AtvddBanco\obj\Debug\AtvddBanco.frmPesquisaContasReceber.resources

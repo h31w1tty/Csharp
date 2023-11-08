@@ -126,5 +126,18 @@ namespace AtvddBanco
         {
             Close();
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            int cod, reg;
+            frmPesquisaContasReceber fpcr = new frmPesquisaContasReceber();
+            fpcr.ShowDialog();
+            cod = fpcr.getCodigo();
+            if (cod > 0)
+            {
+                reg = tb_contasReceberBindingSource.Find("cd_conta", cod);
+                tb_contasReceberBindingSource.Position = reg;
+            }
+        }
     }
 }
