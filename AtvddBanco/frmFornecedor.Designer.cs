@@ -41,6 +41,7 @@
             System.Windows.Forms.Label cd_ieLabel;
             System.Windows.Forms.Label cd_telefoneLabel;
             System.Windows.Forms.Label ds_emailLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFornecedor));
             this.btnSair = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
@@ -68,6 +69,8 @@
             this.cd_ieMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.cd_telefoneMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.cnpjicon = new System.Windows.Forms.Label();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             cd_fornecedorLabel = new System.Windows.Forms.Label();
             nm_fornecedorLabel = new System.Windows.Forms.Label();
             ds_enderecoLabel = new System.Windows.Forms.Label();
@@ -224,6 +227,7 @@
             this.btnImprimir.TabIndex = 33;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnPesquisar
             // 
@@ -497,6 +501,21 @@
             this.cnpjicon.TabIndex = 64;
             this.cnpjicon.Text = "Válido!";
             // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
             // frmFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -577,5 +596,7 @@
         private System.Windows.Forms.MaskedTextBox cd_ieMaskedTextBox;
         private System.Windows.Forms.MaskedTextBox cd_telefoneMaskedTextBox;
         private System.Windows.Forms.Label cnpjicon;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
