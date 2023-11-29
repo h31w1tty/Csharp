@@ -41,6 +41,7 @@
             System.Windows.Forms.Label cd_rgLabel;
             System.Windows.Forms.Label cd_telefoneLabel;
             System.Windows.Forms.Label ds_emailLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
             this.tb_clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.banquihoDataSet = new AtvddBanco.BanquihoDataSet();
             this.tb_clienteTableAdapter = new AtvddBanco.BanquihoDataSetTableAdapters.tb_clienteTableAdapter();
@@ -69,6 +70,8 @@
             this.sg_estadoComboBox = new System.Windows.Forms.ComboBox();
             this.cpficon = new System.Windows.Forms.Label();
             this.rgicon = new System.Windows.Forms.Label();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             cd_clienteLabel = new System.Windows.Forms.Label();
             nm_clienteLabel = new System.Windows.Forms.Label();
             ds_enderecoLabel = new System.Windows.Forms.Label();
@@ -439,6 +442,7 @@
             this.btnImprimir.TabIndex = 32;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnSair
             // 
@@ -511,6 +515,21 @@
             this.rgicon.Size = new System.Drawing.Size(60, 20);
             this.rgicon.TabIndex = 65;
             this.rgicon.Text = "Válido!";
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // frmCliente
             // 
@@ -594,5 +613,7 @@
         private System.Windows.Forms.ComboBox sg_estadoComboBox;
         private System.Windows.Forms.Label cpficon;
         private System.Windows.Forms.Label rgicon;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

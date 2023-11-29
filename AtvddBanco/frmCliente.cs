@@ -287,5 +287,30 @@ namespace AtvddBanco
                 tb_clienteBindingSource.Position = reg;
             }
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.ShowDialog();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            string strDados;
+            Graphics objImpressao = e.Graphics;
+
+            strDados = "FICHA DE CLIENTE" + (char)10 + (char)10;
+            strDados += "Código: " + cd_clienteTextBox.Text + (char)10 + (char)10;
+            strDados += "Nome: " + nm_clienteTextBox.Text + ", CPF: " + cd_cpfMaskedTextBox.Text + ", RG: " + cd_rgMaskedTextBox.Text + (char)10 + (char)10;
+            strDados += "E-mail: " + ds_emailTextBox.Text + " |  Número: " + cd_telefoneMaskedTextBox.Text + (char)10 + (char)10;
+            strDados += "ENDEREÇO" + (char)10 + (char)10 + (char)10;
+            strDados += "Bairro - " + nm_bairroTextBox.Text + (char)10 + (char)10;
+            strDados += ds_enderecoTextBox.Text + " - N°" + cd_numeroTextBox.Text + ", " + nm_cidadeTextBox.Text + " - " + sg_estadoComboBox.Text + (char)10 + (char)10;
+            strDados += "CEP: " + cd_cepMaskedTextBox.Text;
+            
+            
+
+            objImpressao.DrawString(strDados, new Font("Arial", 14, FontStyle.Bold), Brushes.Black, 50, 50);
+            objImpressao.DrawLine(new Pen(Brushes.Black), 50, 80, 700, 80);
+        }
     }
 }
