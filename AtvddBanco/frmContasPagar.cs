@@ -140,5 +140,27 @@ namespace AtvddBanco
                 tb_contasPagarBindingSource.Position = reg;
             }
         }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            string strDados;
+            Graphics objImpressao = e.Graphics;
+
+            strDados = "FICHA DE CONTA A PAGAR" + (char)10 + (char)10;
+            strDados += "Código: " + vl_documentoTextBox.Text + "Código do Fornecedor: " + cd_fornecedorTextBox.Text + (char)10 + (char)10;
+            strDados += "Tipo de Documento: " + ds_documentoTextBox.Text + (char)10;
+            strDados += "Número do Documento: " + cd_documentoTextBox.Text + (char)10;
+            strDados += "Valor do Documento: " + vl_documentoTextBox.Text + (char)10;
+            strDados += "Valor Pago: "+ vl_pagoTextBox.Text + (char)10 + (char)10;
+            strDados += "Data de Emissão: " + dt_emissaoDateTimePicker.Text + "\nData de Pagamento: " + dt_pagamentoDateTimePicker.Text + "\nData Vencimento: " + dt_vencimentoDateTimePicker.Text + (char)10 + (char)10;
+
+            objImpressao.DrawString(strDados, new Font("Arial", 14, FontStyle.Bold), Brushes.Black, 50, 50);
+            objImpressao.DrawLine(new Pen(Brushes.Black), 50, 80, 700, 80);
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.ShowDialog();
+        }
     }
 }
