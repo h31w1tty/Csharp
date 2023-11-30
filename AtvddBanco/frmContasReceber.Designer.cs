@@ -38,6 +38,7 @@
             System.Windows.Forms.Label dt_pagamentoLabel;
             System.Windows.Forms.Label vl_pagoLabel;
             System.Windows.Forms.Label cd_clienteLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmContasReceber));
             this.btnSair = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
@@ -54,13 +55,15 @@
             this.tableAdapterManager = new AtvddBanco.BanquihoDataSetTableAdapters.TableAdapterManager();
             this.cd_contaTextBox = new System.Windows.Forms.TextBox();
             this.cd_documentoTextBox = new System.Windows.Forms.TextBox();
-            this.ds_documentTextBox = new System.Windows.Forms.TextBox();
             this.dt_emissaoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dt_vencimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.vl_documentoTextBox = new System.Windows.Forms.TextBox();
             this.dt_pagamentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.vl_pagoTextBox = new System.Windows.Forms.TextBox();
             this.cd_clienteTextBox = new System.Windows.Forms.TextBox();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.ds_documentTextBox = new System.Windows.Forms.TextBox();
             cd_contaLabel = new System.Windows.Forms.Label();
             cd_documentoLabel = new System.Windows.Forms.Label();
             ds_documentLabel = new System.Windows.Forms.Label();
@@ -78,11 +81,11 @@
             // 
             cd_contaLabel.AutoSize = true;
             cd_contaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            cd_contaLabel.Location = new System.Drawing.Point(161, 43);
+            cd_contaLabel.Location = new System.Drawing.Point(217, 41);
             cd_contaLabel.Name = "cd_contaLabel";
-            cd_contaLabel.Size = new System.Drawing.Size(130, 24);
+            cd_contaLabel.Size = new System.Drawing.Size(76, 24);
             cd_contaLabel.TabIndex = 45;
-            cd_contaLabel.Text = "Código/Conta:";
+            cd_contaLabel.Text = "Código:";
             // 
             // cd_documentoLabel
             // 
@@ -184,6 +187,7 @@
             this.btnImprimir.TabIndex = 43;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnPesquisar
             // 
@@ -316,16 +320,6 @@
             this.cd_documentoTextBox.Size = new System.Drawing.Size(200, 29);
             this.cd_documentoTextBox.TabIndex = 48;
             // 
-            // ds_documentTextBox
-            // 
-            this.ds_documentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_contasReceberBindingSource, "ds_document", true));
-            this.ds_documentTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.ds_documentTextBox.Location = new System.Drawing.Point(193, 88);
-            this.ds_documentTextBox.MaxLength = 40;
-            this.ds_documentTextBox.Name = "ds_documentTextBox";
-            this.ds_documentTextBox.Size = new System.Drawing.Size(200, 29);
-            this.ds_documentTextBox.TabIndex = 50;
-            // 
             // dt_emissaoDateTimePicker
             // 
             this.dt_emissaoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tb_contasReceberBindingSource, "dt_emissao", true));
@@ -383,6 +377,31 @@
             this.cd_clienteTextBox.Name = "cd_clienteTextBox";
             this.cd_clienteTextBox.Size = new System.Drawing.Size(68, 29);
             this.cd_clienteTextBox.TabIndex = 62;
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // ds_documentTextBox
+            // 
+            this.ds_documentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tb_contasReceberBindingSource, "ds_document", true));
+            this.ds_documentTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.ds_documentTextBox.Location = new System.Drawing.Point(193, 88);
+            this.ds_documentTextBox.MaxLength = 40;
+            this.ds_documentTextBox.Name = "ds_documentTextBox";
+            this.ds_documentTextBox.Size = new System.Drawing.Size(200, 29);
+            this.ds_documentTextBox.TabIndex = 50;
             // 
             // frmContasReceber
             // 
@@ -447,12 +466,14 @@
         private BanquihoDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox cd_contaTextBox;
         private System.Windows.Forms.TextBox cd_documentoTextBox;
-        private System.Windows.Forms.TextBox ds_documentTextBox;
         private System.Windows.Forms.DateTimePicker dt_emissaoDateTimePicker;
         private System.Windows.Forms.DateTimePicker dt_vencimentoDateTimePicker;
         private System.Windows.Forms.TextBox vl_documentoTextBox;
         private System.Windows.Forms.DateTimePicker dt_pagamentoDateTimePicker;
         private System.Windows.Forms.TextBox vl_pagoTextBox;
         private System.Windows.Forms.TextBox cd_clienteTextBox;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.TextBox ds_documentTextBox;
     }
 }
